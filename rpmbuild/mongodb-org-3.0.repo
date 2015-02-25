@@ -1,0 +1,9 @@
+[mongodb-org-3.0]
+name=MongoDB Repository
+## baseurl=http://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+## https://repo.mongodb.com/yum/redhat/6/mongodb-enterprise/unstable/x86_64/RPMS/
+## baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-enterprise/unstable/x86_64/
+## http://repo.mongodb.org/yum/redhat/6/mongodb-org/testing/x86_64/RPMS/
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/testing/x86_64/
+gpgcheck=0
+enabled=1

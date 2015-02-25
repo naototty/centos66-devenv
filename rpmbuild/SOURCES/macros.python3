@@ -1,0 +1,24 @@
+# define these macros in a way which will expand them to correct values even for non-scl-build, assuming 's/@scl@//'
+%@scl@__python3
+%@scl@__python %@scl@__python3
+%@scl@python3_sitelib %(%{?scl:scl enable @scl@ '}%{@scl@__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"%{?scl:'})
+%@scl@python_sitelib %@scl@python3_sitelib
+%@scl@python3_sitearch %(%{?scl:scl enable @scl@ '}%{@scl@__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))"%{?scl:'})
+%@scl@python_sitearch %@scl@python3_sitearch
+%@scl@python3_version %(%{?scl:scl enable @scl@ '}%{@scl@__python3} -c "import sys; sys.stdout.write(sys.version[:3])"%{?scl:'})
+%@scl@python_version %@scl@python3_version
+
+# these macros won't be needed if doing non-scl build, so define them in a way that won't overwrite system ones
+%@scl@_os_install_post \
+    /usr/lib/rpm/brp-scl-compress %{_scl_root} \
+    %{!?__debug_package:/usr/lib/rpm/redhat/brp-strip %{__strip} \
+    /usr/lib/rpm/redhat/brp-strip-comment-note %{__strip} %{__objdump} \
+    } \
+    /usr/lib/rpm/redhat/brp-strip-static-archive %{__strip} \
+    %{!?_turn_off_bytecompile:scl enable @scl@ '/usr/lib/rpm/redhat/brp-python-bytecompile-with-scl-python-33 %@scl@__python3 %{?_python_bytecompile_errors_terminate_build} %{_scl_root}'} \
+    /usr/lib/rpm/redhat/brp-python-hardlink
+
+%@scl@_python_provides /usr/lib/rpm/pythondeps-scl-33.sh --provides %{?scl:@scl@-}
+%@scl@_python_requires /usr/lib/rpm/pythondeps-scl-33.sh --requires %{?scl:@scl@-}
+
+%_python_bytecompile_errors_terminate_build 1

@@ -1,0 +1,19 @@
+diff -uNr ORIG-fabric-1.2.0/fabric/main.py fabric-1.2.0/fabric/main.py
+--- ORIG-fabric-1.2.0/fabric/main.py	2011-07-13 09:19:04.000000000 +0900
++++ fabric-1.2.0/fabric/main.py	2011-08-12 12:09:41.200662940 +0900
+@@ -705,7 +705,14 @@
+ 
+         # List available commands
+         if options.list_commands:
+-            print("\n".join(list_commands(docstring, options.list_format)))
++            ##print("\n".join(list_commands(docstring, options.list_format)))
++            line_list = list_commands(docstring, options.list_format)
++            for line in line_list:
++                try:
++                    print '%s' % (unicode(line).encode('utf8'))
++                except(UnicodeDecodeError):
++                    print '%s' % (line)
++            #print "%s" % ( "\n".join(line_list) )
+             sys.exit(0)
+ 
+         # Handle show (command-specific help) option

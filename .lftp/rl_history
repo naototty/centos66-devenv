@@ -1,0 +1,76 @@
+lftp http://ns01.ovps.internal-gmo/pub/Linux
+ls
+cd vault.centos.org/
+ls
+cd 6.6
+ls
+cd SCL/
+ls
+cd Source/
+ls
+cd SPackages/
+ls
+mget python33-python-3.3.2-14.el6.centos.alt.src.rpm
+exit
+lftp http://ns01.ovps.internal-gmo/pub/
+ls
+cd Linux/
+ls
+cd repos.fedorapeople.org/
+ls
+ls -l
+cd repos/
+ls -l
+cd openstack/
+ls
+cd openstack-juno/
+ls -l
+cd SRPMS-epel-6
+ls
+cd ..
+ls
+exit
+lftp http://ftp.riken.jp/Linux/centos/
+ls
+cd ..
+ls
+cd fedora
+ls
+cd epel/
+ls
+cd 6
+ls
+cd SRPMS/
+ls
+jeiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww python-crypto2.6-2.6.1-1.el6.src.rpm 
+ls python-pycro                                                                                                                                                                                                                  jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+ls
+ls -l  python-cri*
+cd ..
+ls
+exit
+lftp http://ns01.ovps.internal-gmo/pub/Linux/
+ls
+cd centos/
+ls
+cd 7.0.1406/
+ls
+cd isos/
+ls
+pwd
+cd x86_64/
+ls
+pwd
+open ftp://ftp.riken.jp/Linux/
+ls
+cd centos/
+ls
+cd 6.6
+ls
+cd isos
+ls
+cd x86_64/
+ls
+pwwd
+pwd
+exit
