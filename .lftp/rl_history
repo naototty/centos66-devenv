@@ -1,76 +1,312 @@
+ 1425963955
 lftp http://ns01.ovps.internal-gmo/pub/Linux
+ 1425963955
 ls
+ 1425963955
 cd vault.centos.org/
+ 1425963955
 ls
+ 1425963955
 cd 6.6
+ 1425963955
 ls
+ 1425963955
 cd SCL/
+ 1425963955
 ls
+ 1425963955
 cd Source/
+ 1425963955
 ls
+ 1425963955
 cd SPackages/
+ 1425963955
 ls
+ 1425963955
 mget python33-python-3.3.2-14.el6.centos.alt.src.rpm
+ 1425963955
 exit
+ 1425963955
 lftp http://ns01.ovps.internal-gmo/pub/
+ 1425963955
 ls
+ 1425963955
 cd Linux/
+ 1425963955
 ls
+ 1425963955
 cd repos.fedorapeople.org/
+ 1425963955
 ls
+ 1425963955
 ls -l
+ 1425963955
 cd repos/
+ 1425963955
 ls -l
+ 1425963955
 cd openstack/
+ 1425963955
 ls
+ 1425963955
 cd openstack-juno/
+ 1425963955
 ls -l
+ 1425963955
 cd SRPMS-epel-6
+ 1425963955
 ls
+ 1425963955
 cd ..
+ 1425963955
 ls
+ 1425963955
 exit
+ 1425963955
 lftp http://ftp.riken.jp/Linux/centos/
+ 1425963955
 ls
+ 1425963955
 cd ..
+ 1425963955
 ls
+ 1425963955
 cd fedora
+ 1425963955
 ls
+ 1425963955
 cd epel/
+ 1425963955
 ls
+ 1425963955
 cd 6
+ 1425963955
 ls
+ 1425963955
 cd SRPMS/
+ 1425963955
 ls
+ 1425963955
 jeiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww python-crypto2.6-2.6.1-1.el6.src.rpm 
+ 1425963955
 ls python-pycro                                                                                                                                                                                                                  jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+ 1425963955
 ls
+ 1425963955
 ls -l  python-cri*
+ 1425963955
 cd ..
+ 1425963955
 ls
+ 1425963955
 exit
+ 1425963955
 lftp http://ns01.ovps.internal-gmo/pub/Linux/
+ 1425963955
 ls
+ 1425963955
 cd centos/
+ 1425963955
 ls
+ 1425963955
 cd 7.0.1406/
+ 1425963955
 ls
+ 1425963955
 cd isos/
+ 1425963955
 ls
+ 1425963955
 pwd
+ 1425963955
 cd x86_64/
+ 1425963955
 ls
+ 1425963955
 pwd
+ 1425963955
 open ftp://ftp.riken.jp/Linux/
+ 1425963955
 ls
+ 1425963955
 cd centos/
+ 1425963955
 ls
+ 1425963955
 cd 6.6
+ 1425963955
 ls
+ 1425963955
 cd isos
+ 1425963955
 ls
+ 1425963955
 cd x86_64/
+ 1425963955
 ls
+ 1425963955
 pwwd
+ 1425963955
 pwd
+ 1425963955
+exit
+ 1425963955
+lftp http://ftp.riken.jp/Linux/
+ 1425963955
+ls
+ 1425963955
+cd rpmfusion/
+ 1425963955
+ls
+ 1425963955
+cd free/
+ 1425963955
+ls
+ 1425963955
+cd el
+ 1425963955
+ls
+ 1425963955
+cd releases/
+ 1425963955
+ls
+ 1425963955
+cd 6
+ 1425963955
+ls
+ 1425963955
+cd Everything/
+ 1425963955
+ls
+ 1425963955
+cd source/
+ 1425963955
+ls
+ 1425963955
+cd SRPMS/
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd .
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd cd repoforge/
+ 1425963955
+cd repoforge/
+ 1425963955
+ls
+ 1425963955
+cd source/
+ 1425963955
+ls
+ 1425963955
+mget lftp-4.5.3-1.rfx.src.rpm
+ 1425963955
+exit
+ 1425963955
+lftp http://ftp.riken.jp/Linux/
+ 1425963955
+ls
+ 1425963957
+exit
+ 1425963971
+lftp https://repo.mongodb.org/yum/redhat/
+ 1425963972
+ls
+ 1425963975
+cd 6
+ 1425963975
+ls
+ 1425963977
+cd mongodb-org/
+ 1425963978
+ls
+ 1425963980
+cd 3.0
+ 1425963980
+ls
+ 1425963982
+cd x86_64/
+ 1425963982
+ls
+ 1425963985
+cd RPMS/
+ 1425963985
+l
+ 1425963986
+ls
+ 1425963992
+pwd
+ 1425964003
+exit
+ 1425964067
+lftp https://repo.mongodb.org/yum/redhat/6/mongodb-org/
+ 1425964068
+ls
+ 1425964070
+cd 3.0/
+ 1425964070
+ls
+ 1425964071
+cd x86_64/
+ 1425964072
+ls
+ 1425964074
+cd RPMS/
+ 1425964074
+ls
+ 1425964089
+!pwd
+ 1425964091
+mget *
+ 1425964099
+cd ..
+ 1425964100
+ls
+ 1425964101
+cd ..
+ 1425964102
+ls
+ 1425964103
+cd ..
+ 1425964103
+ls
+ 1425964106
+cd ..
+ 1425964106
+ls
+ 1425964108
+cd ..
+ 1425964108
+ls
+ 1425964110
+cd ..
+ 1425964110
+ls
+ 1425964113
+cd ..
+ 1425964114
+ls
+ 1425964116
 exit
