@@ -316,3 +316,27 @@ lftp http://agentzh.org/misc/nginx/
 ls
  1426083803
 exit
+ 1426134021
+lftp https://repo.mongodb.org/yum/redhat/6/mongodb-org/3.0/x86_64
+ 1426134022
+cd ..
+ 1426134022
+ls
+ 1426134024
+cd ..
+ 1426134025
+ls
+ 1426134027
+cd ..
+ 1426134028
+ls
+ 1426134029
+cd ..
+ 1426134030
+ls
+ 1426134032
+cd ..
+ 1426134032
+ls
+ 1426134035
+exit
