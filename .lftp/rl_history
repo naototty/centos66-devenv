@@ -310,3 +310,9 @@ cd ..
 ls
  1425964116
 exit
+ 1426083799
+lftp http://agentzh.org/misc/nginx/
+ 1426083800
+ls
+ 1426083803
+exit
