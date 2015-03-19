@@ -15,6 +15,9 @@ reconfigure.user
 rpmbuild/BUILD/*
 rpmbuild/BUILDROOT/*
 rpmbuild/temp/*
+rpmbuild/SOURCES/*
+rpmbuild/noarch
+rpmbuild/x86_64
 _s99useraccounts
 .ssh/
 .tcshrc

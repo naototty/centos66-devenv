@@ -340,3 +340,139 @@ cd ..
 ls
  1426134035
 exit
+ 1426566335
+lftp http://ftp.riken.jp/Linux/
+ 1426566336
+ls
+ 1426566338
+cd fedora
+ 1426566338
+ls
+ 1426566340
+cd releases/
+ 1426566340
+ls
+ 1426566343
+cd 21
+ 1426566344
+ls
+ 1426566347
+cd Server/
+ 1426566347
+ls
+ 1426566349
+cd x86_64/
+ 1426566349
+ls
+ 1426566351
+cd iso
+ 1426566351
+ls
+ 1426566353
+pwd
+ 1426566356
+exit
+ 1426601134
+lftp http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/iso/latest/
+ 1426601137
+ls
+ 1426601138
+cd ..
+ 1426601139
+ls
+ 1426601140
+cd ..
+ 1426601140
+ls
+ 1426601141
+cd ..
+ 1426601141
+ls
+ 1426601147
+cd openSUSE/
+ 1426601147
+ls
+ 1426601150
+cd distribution/
+ 1426601150
+ls
+ 1426601153
+cd 13.2
+ 1426601153
+ls
+ 1426601155
+cd iso
+ 1426601155
+ls
+ 1426601201
+exit
+ 1426602470
+lftp http://ftp.jaist.ac.jp:/pub/Linux/openSUSE/distribution/13.2/iso/
+ 1426602471
+ls
+ 1426602483
+pwd
+ 1426602487
+exit
+ 1426641758
+lftp ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/
+ 1426641759
+ls
+ 1426641765
+exit
+ 1426660506
+lftp http://ftp.jaist.ac.jp:/pub/Linux/
+ 1426660507
+ls
+ 1426660509
+cd ..
+ 1426660510
+ls
+ 1426660532
+cd FreeBSD-jp
+ 1426660532
+ls
+ 1426660538
+cd ..
+ 1426660538
+ls
+ 1426660553
+cd DragonFly/
+ 1426660553
+ls
+ 1426660555
+cd iso-images/
+ 1426660555
+ls
+ 1426660566
+cd ..
+ 1426660567
+ls
+ 1426660570
+cd ..
+ 1426660570
+ls
+ 1426660576
+cd NetBSD
+ 1426660577
+ls
+ 1426660578
+cd iso
+ 1426660579
+ls
+ 1426660582
+cd 6.1.5
+ 1426660582
+ls
+ 1426660624
+ls | grep ams
+ 1426660626
+ls | grep amd
+ 1426660633
+exit
+ 1426678593
+lftp ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/
+ 1426678594
+ls
+ 1426678602
+exit
