@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[core]
+	user = "naototty"
+	email = naototty@outlook.com
+# Please adapt and uncomment the following lines:
+#	user = root
+#	email = root@dev-iso-upload01.tyo1.v4.internal-gmo
+[user]
+	name = Naoto Gohko naototty
+	email = naototty@outlook.com

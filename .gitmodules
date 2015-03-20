@@ -1,0 +1,3 @@
+[submodule "rpmbuild/mongo-spec-src"]
+	path = rpmbuild/mongo-spec-src
+	url = https://github.com/mongodb/mongo.git

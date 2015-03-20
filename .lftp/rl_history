@@ -1,0 +1,478 @@
+ 1425963955
+lftp http://ns01.ovps.internal-gmo/pub/Linux
+ 1425963955
+ls
+ 1425963955
+cd vault.centos.org/
+ 1425963955
+ls
+ 1425963955
+cd 6.6
+ 1425963955
+ls
+ 1425963955
+cd SCL/
+ 1425963955
+ls
+ 1425963955
+cd Source/
+ 1425963955
+ls
+ 1425963955
+cd SPackages/
+ 1425963955
+ls
+ 1425963955
+mget python33-python-3.3.2-14.el6.centos.alt.src.rpm
+ 1425963955
+exit
+ 1425963955
+lftp http://ns01.ovps.internal-gmo/pub/
+ 1425963955
+ls
+ 1425963955
+cd Linux/
+ 1425963955
+ls
+ 1425963955
+cd repos.fedorapeople.org/
+ 1425963955
+ls
+ 1425963955
+ls -l
+ 1425963955
+cd repos/
+ 1425963955
+ls -l
+ 1425963955
+cd openstack/
+ 1425963955
+ls
+ 1425963955
+cd openstack-juno/
+ 1425963955
+ls -l
+ 1425963955
+cd SRPMS-epel-6
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+exit
+ 1425963955
+lftp http://ftp.riken.jp/Linux/centos/
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd fedora
+ 1425963955
+ls
+ 1425963955
+cd epel/
+ 1425963955
+ls
+ 1425963955
+cd 6
+ 1425963955
+ls
+ 1425963955
+cd SRPMS/
+ 1425963955
+ls
+ 1425963955
+jeiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww python-crypto2.6-2.6.1-1.el6.src.rpm 
+ 1425963955
+ls python-pycro                                                                                                                                                                                                                  jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+ 1425963955
+ls
+ 1425963955
+ls -l  python-cri*
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+exit
+ 1425963955
+lftp http://ns01.ovps.internal-gmo/pub/Linux/
+ 1425963955
+ls
+ 1425963955
+cd centos/
+ 1425963955
+ls
+ 1425963955
+cd 7.0.1406/
+ 1425963955
+ls
+ 1425963955
+cd isos/
+ 1425963955
+ls
+ 1425963955
+pwd
+ 1425963955
+cd x86_64/
+ 1425963955
+ls
+ 1425963955
+pwd
+ 1425963955
+open ftp://ftp.riken.jp/Linux/
+ 1425963955
+ls
+ 1425963955
+cd centos/
+ 1425963955
+ls
+ 1425963955
+cd 6.6
+ 1425963955
+ls
+ 1425963955
+cd isos
+ 1425963955
+ls
+ 1425963955
+cd x86_64/
+ 1425963955
+ls
+ 1425963955
+pwwd
+ 1425963955
+pwd
+ 1425963955
+exit
+ 1425963955
+lftp http://ftp.riken.jp/Linux/
+ 1425963955
+ls
+ 1425963955
+cd rpmfusion/
+ 1425963955
+ls
+ 1425963955
+cd free/
+ 1425963955
+ls
+ 1425963955
+cd el
+ 1425963955
+ls
+ 1425963955
+cd releases/
+ 1425963955
+ls
+ 1425963955
+cd 6
+ 1425963955
+ls
+ 1425963955
+cd Everything/
+ 1425963955
+ls
+ 1425963955
+cd source/
+ 1425963955
+ls
+ 1425963955
+cd SRPMS/
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd .
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd ..
+ 1425963955
+ls
+ 1425963955
+cd cd repoforge/
+ 1425963955
+cd repoforge/
+ 1425963955
+ls
+ 1425963955
+cd source/
+ 1425963955
+ls
+ 1425963955
+mget lftp-4.5.3-1.rfx.src.rpm
+ 1425963955
+exit
+ 1425963955
+lftp http://ftp.riken.jp/Linux/
+ 1425963955
+ls
+ 1425963957
+exit
+ 1425963971
+lftp https://repo.mongodb.org/yum/redhat/
+ 1425963972
+ls
+ 1425963975
+cd 6
+ 1425963975
+ls
+ 1425963977
+cd mongodb-org/
+ 1425963978
+ls
+ 1425963980
+cd 3.0
+ 1425963980
+ls
+ 1425963982
+cd x86_64/
+ 1425963982
+ls
+ 1425963985
+cd RPMS/
+ 1425963985
+l
+ 1425963986
+ls
+ 1425963992
+pwd
+ 1425964003
+exit
+ 1425964067
+lftp https://repo.mongodb.org/yum/redhat/6/mongodb-org/
+ 1425964068
+ls
+ 1425964070
+cd 3.0/
+ 1425964070
+ls
+ 1425964071
+cd x86_64/
+ 1425964072
+ls
+ 1425964074
+cd RPMS/
+ 1425964074
+ls
+ 1425964089
+!pwd
+ 1425964091
+mget *
+ 1425964099
+cd ..
+ 1425964100
+ls
+ 1425964101
+cd ..
+ 1425964102
+ls
+ 1425964103
+cd ..
+ 1425964103
+ls
+ 1425964106
+cd ..
+ 1425964106
+ls
+ 1425964108
+cd ..
+ 1425964108
+ls
+ 1425964110
+cd ..
+ 1425964110
+ls
+ 1425964113
+cd ..
+ 1425964114
+ls
+ 1425964116
+exit
+ 1426083799
+lftp http://agentzh.org/misc/nginx/
+ 1426083800
+ls
+ 1426083803
+exit
+ 1426134021
+lftp https://repo.mongodb.org/yum/redhat/6/mongodb-org/3.0/x86_64
+ 1426134022
+cd ..
+ 1426134022
+ls
+ 1426134024
+cd ..
+ 1426134025
+ls
+ 1426134027
+cd ..
+ 1426134028
+ls
+ 1426134029
+cd ..
+ 1426134030
+ls
+ 1426134032
+cd ..
+ 1426134032
+ls
+ 1426134035
+exit
+ 1426566335
+lftp http://ftp.riken.jp/Linux/
+ 1426566336
+ls
+ 1426566338
+cd fedora
+ 1426566338
+ls
+ 1426566340
+cd releases/
+ 1426566340
+ls
+ 1426566343
+cd 21
+ 1426566344
+ls
+ 1426566347
+cd Server/
+ 1426566347
+ls
+ 1426566349
+cd x86_64/
+ 1426566349
+ls
+ 1426566351
+cd iso
+ 1426566351
+ls
+ 1426566353
+pwd
+ 1426566356
+exit
+ 1426601134
+lftp http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/iso/latest/
+ 1426601137
+ls
+ 1426601138
+cd ..
+ 1426601139
+ls
+ 1426601140
+cd ..
+ 1426601140
+ls
+ 1426601141
+cd ..
+ 1426601141
+ls
+ 1426601147
+cd openSUSE/
+ 1426601147
+ls
+ 1426601150
+cd distribution/
+ 1426601150
+ls
+ 1426601153
+cd 13.2
+ 1426601153
+ls
+ 1426601155
+cd iso
+ 1426601155
+ls
+ 1426601201
+exit
+ 1426602470
+lftp http://ftp.jaist.ac.jp:/pub/Linux/openSUSE/distribution/13.2/iso/
+ 1426602471
+ls
+ 1426602483
+pwd
+ 1426602487
+exit
+ 1426641758
+lftp ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/
+ 1426641759
+ls
+ 1426641765
+exit
+ 1426660506
+lftp http://ftp.jaist.ac.jp:/pub/Linux/
+ 1426660507
+ls
+ 1426660509
+cd ..
+ 1426660510
+ls
+ 1426660532
+cd FreeBSD-jp
+ 1426660532
+ls
+ 1426660538
+cd ..
+ 1426660538
+ls
+ 1426660553
+cd DragonFly/
+ 1426660553
+ls
+ 1426660555
+cd iso-images/
+ 1426660555
+ls
+ 1426660566
+cd ..
+ 1426660567
+ls
+ 1426660570
+cd ..
+ 1426660570
+ls
+ 1426660576
+cd NetBSD
+ 1426660577
+ls
+ 1426660578
+cd iso
+ 1426660579
+ls
+ 1426660582
+cd 6.1.5
+ 1426660582
+ls
+ 1426660624
+ls | grep ams
+ 1426660626
+ls | grep amd
+ 1426660633
+exit
+ 1426678593
+lftp ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/
+ 1426678594
+ls
+ 1426678602
+exit

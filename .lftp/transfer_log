@@ -1,0 +1,10 @@
+2015-02-17 11:47:05 http://ns01.ovps.internal-gmo/pub/Linux/vault.centos.org/6.6/SCL/Source/SPackages/python33-python-3.3.2-14.el6.centos.alt.src.rpm -> /root/python33-python-3.3.2-14.el6.centos.alt.src.rpm 0-11957499 35.86M/s
+2015-03-10 14:02:22 http://ftp.riken.jp/Linux/repoforge/source/lftp-4.5.3-1.rfx.src.rpm -> /root/rpmbuild/lftp-4.5.3-1.rfx.src.rpm 0-1939535 6.98M/s
+2015-03-10 14:08:11 https://repo.mongodb.org/yum/redhat/6/mongodb-org/3.0/x86_64/RPMS/mongodb-org-3.0.0-1.el6.x86_64.rpm -> /root/rpmbuild/mongodb-org-3.0.0-1.el6.x86_64.rpm 0-4636 577.8 KiB/s
+2015-03-10 14:08:12 https://repo.mongodb.org/yum/redhat/6/mongodb-org/3.0/x86_64/RPMS/mongodb-org-mongos-3.0.0-1.el6.x86_64.rpm -> /root/rpmbuild/mongodb-org-mongos-3.0.0-1.el6.x86_64.rpm 0-4047679 5.60 MiB/s
+2015-03-10 14:08:13 https://repo.mongodb.org/yum/redhat/6/mongodb-org/3.0/x86_64/RPMS/mongodb-org-server-3.0.0-1.el6.x86_64.rpm -> /root/rpmbuild/mongodb-org-server-3.0.0-1.el6.x86_64.rpm 0-8587969 6.84 MiB/s
+2015-03-10 14:08:14 https://repo.mongodb.org/yum/redhat/6/mongodb-org/3.0/x86_64/RPMS/mongodb-org-shell-3.0.0-1.el6.x86_64.rpm -> /root/rpmbuild/mongodb-org-shell-3.0.0-1.el6.x86_64.rpm 0-4260034 8.96 MiB/s
+2015-03-10 14:08:17 https://repo.mongodb.org/yum/redhat/6/mongodb-org/3.0/x86_64/RPMS/mongodb-org-tools-3.0.0-1.el6.x86_64.rpm -> /root/rpmbuild/mongodb-org-tools-3.0.0-1.el6.x86_64.rpm 0-32817717 11.15 MiB/s
+2015-03-17 13:21:41 ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/sha256sum.txt -> /mnt/isos/repos/ftp.riken.jp/Linux/centos/6.6/isos/x86_64/sha256sum.txt 0-389 2.1 KiB/s
+2015-03-17 13:21:58 ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-minimal.iso -> /mnt/isos/repos/ftp.riken.jp/Linux/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-minimal.iso 0-401604608 22.97 MiB/s
+2015-03-17 22:24:05 http://ftp.riken.jp/Linux/fedora/releases/21/Server/x86_64/iso/Fedora-Server-21-x86_64-CHECKSUM -> /mnt/isos/repos/repos_cached/ftp.riken.jp/Linux/fedora/releases/21/Server/x86_64/iso/Fedora-Server-21-x86_64-CHECKSUM 0-1139 24.5 KiB/s

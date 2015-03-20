@@ -1,0 +1,42 @@
+[root@dev-iso-upload01 rpmbuild]# pip install -U celery-with-redis
+Downloading/unpacking celery-with-redis
+  Downloading celery-with-redis-3.0.tar.gz
+  Running setup.py egg_info for package celery-with-redis
+Requirement already up-to-date: celery>=3.0,<4.0 in /usr/lib/python2.6/site-packages (from celery-with-redis)
+Downloading/unpacking redis>=2.4.4 (from celery-with-redis)
+  Downloading redis-2.10.3.tar.gz (86kB): 86kB downloaded
+  Running setup.py egg_info for package redis
+    warning: no previously-included files found matching '__pycache__'
+    warning: no previously-included files matching '*.pyc' found under directory 'tests'
+Downloading/unpacking pytz>dev from https://pypi.python.org/packages/source/p/pytz/pytz-2014.10.tar.bz2#md5=1fb418c59c62f782e35875577bd1ac3f (from celery>=3.0,<4.0->celery-with-redis)
+  Downloading pytz-2014.10.tar.bz2 (166kB): 166kB downloaded
+  Running setup.py egg_info for package pytz
+Requirement already up-to-date: billiard>=3.3.0.19,<3.4 in /usr/lib64/python2.6/site-packages (from celery>=3.0,<4.0->celery-with-redis)
+Requirement already up-to-date: kombu>=3.0.24,<3.1 in /usr/lib/python2.6/site-packages (from celery>=3.0,<4.0->celery-with-redis)
+Requirement already up-to-date: anyjson>=0.3.3 in /usr/lib/python2.6/site-packages (from kombu>=3.0.24,<3.1->celery>=3.0,<4.0->celery-with-redis)
+Requirement already up-to-date: amqp>=1.4.6,<2.0 in /usr/lib/python2.6/site-packages (from kombu>=3.0.24,<3.1->celery>=3.0,<4.0->celery-with-redis)
+Downloading/unpacking importlib from https://pypi.python.org/packages/source/i/importlib/importlib-1.0.3.tar.bz2#md5=5a732d8df8cf6c663d15564df335b247 (from kombu>=3.0.24,<3.1->celery>=3.0,<4.0->celery-with-redis)
+  Downloading importlib-1.0.3.tar.bz2
+  Running setup.py egg_info for package importlib
+Requirement already up-to-date: ordereddict in /usr/lib/python2.6/site-packages (from kombu>=3.0.24,<3.1->celery>=3.0,<4.0->celery-with-redis)
+Installing collected packages: celery-with-redis, redis, pytz, importlib
+  Running setup.py install for celery-with-redis
+  Found existing installation: redis 2.0.0
+    Uninstalling redis:
+      Successfully uninstalled redis
+  Running setup.py install for redis
+    warning: no previously-included files found matching '__pycache__'
+    warning: no previously-included files matching '*.pyc' found under directory 'tests'
+  Found existing installation: pytz 2010h
+    Uninstalling pytz:
+      Successfully uninstalled pytz
+  Running setup.py install for pytz
+  Found existing installation: importlib 1.0.2
+    Uninstalling importlib:
+      Successfully uninstalled importlib
+  Running setup.py install for importlib
+Successfully installed celery-with-redis redis pytz importlib
+Cleaning up...
+[root@dev-iso-upload01 rpmbuild]# ^C
+[root@dev-iso-upload01 rpmbuild]# cd
+[
