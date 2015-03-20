@@ -1,0 +1,14 @@
+## http://naototty.github.io/centos66-devenv/
+
+[naototty c66 devenv]
+name=naototty centos66 devenv Repository
+baseurl=http://naototty.github.io/centos66-devenv/rpmbuild/RPMS/
+gpgcheck=0
+enabled=1
+
+
+[naototty c66 devenv src]
+name=naototty centos66 devenv src Repository
+baseurl=http://naototty.github.io/centos66-devenv/rpmbuild/SRPMS/
+gpgcheck=0
+enabled=1
