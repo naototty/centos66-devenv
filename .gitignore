@@ -9,6 +9,9 @@ chk_user
 fabfile/
 .gitignores
 .lesshst
+.vim/bundle/
+.pip/
+bin
 log_conoha_add_download.log
 passwd.must.remove.user
 reconfigure.user

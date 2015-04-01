@@ -38,6 +38,11 @@ Requires(pre): shadow-utils
 Requires: initscripts >= 8.36
 Requires(post): chkconfig
 Requires: openssl
+Requires:	GeoIP-update
+Requires:	GeoIP
+Requires:	GeoIP-update6
+Requires:	geoip-geolite
+BuildRequires: GeoIP-devel
 BuildRequires: openssl-devel
 %endif
 
@@ -47,6 +52,11 @@ Requires(pre): shadow-utils
 Requires: initscripts >= 8.36
 Requires(post): chkconfig
 Requires: openssl >= 1.0.1
+Requires:	GeoIP-update
+Requires:	GeoIP
+Requires:	GeoIP-update6
+Requires:	geoip-geolite
+BuildRequires: GeoIP-devel
 BuildRequires: openssl-devel >= 1.0.1
 %define with_spdy 1
 %endif
@@ -56,6 +66,9 @@ Group: System Environment/Daemons
 Requires(pre): shadow-utils
 Requires: systemd
 Requires: openssl >= 1.0.1
+Requires:	GeoIP-update
+Requires:	GeoIP
+BuildRequires: GeoIP-devel
 BuildRequires: systemd
 BuildRequires: openssl-devel >= 1.0.1
 Epoch: 1
@@ -64,8 +77,11 @@ Epoch: 1
 
 
 Name:		ngx_openresty
-Version:	1.7.10.1
-Release:	1.1.gmo%{?dist}
+## Version:	1.7.10.1
+## Version:	1.7.10.2.gmo
+Version:	1.7.10.3.g
+## ngx_openresty-1.7.10.2.gmo.tar.gz
+Release:	1.2.gmo%{?dist}
 Summary:	a fast web app server by extending nginx
 
 Group:		Productivity/Networking/Web/Servers
@@ -82,7 +98,8 @@ Source10006: nginx.vh.example_ssl.conf
 Source10007: nginx.suse.init
 Source10008: nginx.service
 Source10009: nginx.upgrade.sh
-Obsoletes: nginx => 1.6.2
+Obsoletes: nginx
+Provides:  nginx
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 ## BuildRoot:	%%(mktemp -ud %%{_tmppath}/%%{name}-%%{version}-%%{release}-XXXXXX)
@@ -90,9 +107,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	sed openssl-devel readline-devel
 BuildRequires: zlib-devel
 BuildRequires: pcre-devel
-BuildRequires: GeoIP-devel
 ## GeoIP-devel.x86_64 GeoIP-update.noarch GeoIP-update6.noarch GeoIP.x86_64 geoip-geolite.noarch
-Requires:	GeoIP-update GeoIP-update6 GeoIP geoip-geolite
+
 Requires:	openssl pcre readline
 Requires(pre):	shadow-utils
 
@@ -178,6 +194,13 @@ Not stripped version of nginx built with the debugging log support.
 ##     --with-luajit-xcflags=FLAGS \
 ##     --with-luajit=/usr/lua/luajit \
 ##   --with-luajit-xcflags='-DLUA_USE_APICHECK -DLUA_USE_ASSERT -DLUA_ROOT=/usr/lua/luajit' \
+##     --add-module=%{_builddir}/%{name}-%{version}/bundle/ngx_mruby \
+##     --add-module=%{_builddir}/%{name}-%{version}/bundle/ngx_mruby/dependence/ngx_devel_kit \
+##     --add-module=%{_builddir}/%{name}-%{version}/bundle/nginx-sticky-module-ng \
+##     --add-module=%{_builddir}/%{name}-%{version}/bundle/nginx_upstream_check_module \
+##     --with-http_ngx_mruby_module \
+##     --with-http_sticky_ng_module \
+##     --with-http_upstream_check_module \
 ./configure \
         --prefix=%{_sysconfdir}/nginx \
         --sbin-path=%{_sbindir}/nginx \
@@ -212,6 +235,7 @@ Not stripped version of nginx built with the debugging log support.
         --with-http_auth_request_module \
         --with-mail \
         --with-mail_ssl_module \
+   --without-http_ngx_mruby_module \
         --with-file-aio \
         --with-ipv6 \
         --with-debug \
@@ -241,6 +265,13 @@ make %{?_smp_mflags}
 ## --with-luajit
 ##     --with-luajit=/usr/lua/luajit \
 ## LUA_ROOT=/usr/lua/luajit 
+##     --add-module=%{_builddir}/%{name}-%{version}/bundle/ngx_mruby \
+##     --add-module=%{_builddir}/%{name}-%{version}/bundle/ngx_mruby/dependence/ngx_devel_kit \
+##     --add-module=%{_builddir}/%{name}-%{version}/bundle/nginx-sticky-module-ng \
+##     --add-module=%{_builddir}/%{name}-%{version}/bundle/nginx_upstream_check_module \
+##     --with-http_ngx_mruby_module \
+##     --with-http_sticky_ng_module \
+##     --with-http_upstream_check_module \
 ./configure \
         --prefix=%{_sysconfdir}/nginx \
         --sbin-path=%{_sbindir}/nginx \
@@ -275,6 +306,7 @@ make %{?_smp_mflags}
         --with-http_auth_request_module \
         --with-mail \
         --with-mail_ssl_module \
+   --without-http_ngx_mruby_module \
         --with-file-aio \
         --with-ipv6 \
         %{?with_spdy:--with-http_spdy_module} \
@@ -627,6 +659,9 @@ fi
 
 
 %changelog
+* Wed Mar 13 2015 Naoto Gohko <naoto-gohko@gmo.jp> - 1.7.10.1-1.2.gmo
+- fix el7 build
+
 * Wed Mar 11 2015 Naoto Gohko <naoto-gohko@gmo.jp> - 1.7.10.1-1.1.gmo
 - re-pkgage 1.7.10.1 ngx_openresty
 

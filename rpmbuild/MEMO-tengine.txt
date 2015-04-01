@@ -1,0 +1,16 @@
+### MEMO
+
+https://github.com/alibaba/tengine
+
+
+https://github.com/yaoweibin/nginx_upstream_check_module
+
+
+ftp://ftp.pbone.net/mirror/ftp.sourceforge.net/pub/sourceforge/o/os/osolinux/Source
+
+
+http://purplegrape.blog.51cto.com/1330104/1296930
+
+
+
+
