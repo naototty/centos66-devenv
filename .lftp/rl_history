@@ -476,3 +476,87 @@ lftp ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/
 ls
  1426678602
 exit
+ 1426854009
+lftp ftp://ftp.pbone.net/mirror/ftp.sourceforge.net/pub/sourceforge/o/os/osolinux/update/
+ 1426854376
+ls 
+ 1426854383
+cd ..
+ 1426854384
+ls
+ 1426854389
+cd Source/
+ 1426854391
+ls
+ 1426854398
+cd Q-Z/
+ 1426854399
+ls
+ 1426854424
+mget tengine-2.0.0-1mgc30.src.rpm 
+ 1426854436
+mget zip-3.0-5mgc30.src.rpm 
+ 1426854446
+!bash
+ 1426854564
+mget unzip-6.0-6mgc30.src.rpm 
+ 1426854826
+cd ..
+ 1426854827
+ls
+ 1426854832
+pwd
+ 1426854841
+!bash
+ 1426854856
+ls 
+ 1426854859
+cd ..
+ 1426854859
+ls
+ 1426854863
+cd update/
+ 1426854863
+ls
+ 1426854870
+cd RPMS.driver
+ 1426854872
+ls
+ 1426854887
+cd ..
+ 1426854887
+ls
+ 1426854892
+cd RPMS.office
+ 1426854893
+ls
+ 1426854959
+cd ..
+ 1426854960
+ls -l
+ 1426854967
+cd RPMS.t
+ 1426854968
+ls
+ 1426855015
+cd ..
+ 1426855015
+ls
+ 1426855018
+cd Source/
+ 1426855019
+ls
+ 1426855026
+cd Q-Z/
+ 1426855027
+ls
+ 1426855092
+mget 
+ 1426855097
+mget tokyocabinet-1.4.47-6mgc30.src.rpm 
+ 1426855111
+cd ..
+ 1426855111
+ls
+ 1426855151
+exit

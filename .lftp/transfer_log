@@ -8,3 +8,7 @@
 2015-03-17 13:21:41 ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/sha256sum.txt -> /mnt/isos/repos/ftp.riken.jp/Linux/centos/6.6/isos/x86_64/sha256sum.txt 0-389 2.1 KiB/s
 2015-03-17 13:21:58 ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-minimal.iso -> /mnt/isos/repos/ftp.riken.jp/Linux/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-minimal.iso 0-401604608 22.97 MiB/s
 2015-03-17 22:24:05 http://ftp.riken.jp/Linux/fedora/releases/21/Server/x86_64/iso/Fedora-Server-21-x86_64-CHECKSUM -> /mnt/isos/repos/repos_cached/ftp.riken.jp/Linux/fedora/releases/21/Server/x86_64/iso/Fedora-Server-21-x86_64-CHECKSUM 0-1139 24.5 KiB/s
+2015-03-20 21:27:12 ftp://ftp.pbone.net/mirror/ftp.sourceforge.net/pub/sourceforge/o/os/osolinux/Source/Q-Z/tengine-2.0.0-1mgc30.src.rpm -> /root/rpmbuild/tengine-2.0.0-1mgc30.src.rpm 0-1546851 181.8 KiB/s
+2015-03-20 21:27:23 ftp://ftp.pbone.net/mirror/ftp.sourceforge.net/pub/sourceforge/o/os/osolinux/Source/Q-Z/zip-3.0-5mgc30.src.rpm -> /root/rpmbuild/zip-3.0-5mgc30.src.rpm 0-1130052 154.3 KiB/s
+2015-03-20 21:29:31 ftp://ftp.pbone.net/mirror/ftp.sourceforge.net/pub/sourceforge/o/os/osolinux/Source/Q-Z/unzip-6.0-6mgc30.src.rpm -> /root/rpmbuild/unzip-6.0-6mgc30.src.rpm 0-1392186 180.8 KiB/s
+2015-03-20 21:38:23 ftp://ftp.pbone.net/mirror/ftp.sourceforge.net/pub/sourceforge/o/os/osolinux/Source/Q-Z/tokyocabinet-1.4.47-6mgc30.src.rpm -> /root/rpmbuild/tokyocabinet-1.4.47-6mgc30.src.rpm 0-1008614 143.4 KiB/s

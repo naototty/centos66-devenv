@@ -8,3 +8,5 @@
 [user]
 	name = Naoto Gohko naototty
 	email = naototty@outlook.com
+[credential]
+	helper = cache --timeout=300
