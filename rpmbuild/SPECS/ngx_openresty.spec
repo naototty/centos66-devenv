@@ -7,6 +7,9 @@
 %define orig_pkg_name nginx
 %define orig_pkg_version 1.7.10
 
+%define mruby_mod_ver 1.8.8
+%define mruby_mod_dir ngx_mruby-%{mruby_mod_ver}
+
 # distribution specific definitions
 %define use_systemd (0%{?fedora} && 0%{?fedora} >= 18) || (0%{?rhel} && 0%{?rhel} >= 7)
 
@@ -77,11 +80,9 @@ Epoch: 1
 
 
 Name:		ngx_openresty
-## Version:	1.7.10.1
-## Version:	1.7.10.2.gmo
 Version:	1.7.10.3.g
 ## ngx_openresty-1.7.10.2.gmo.tar.gz
-Release:	1.2.gmo%{?dist}
+Release:	1.3.gmo%{?dist}
 Summary:	a fast web app server by extending nginx
 
 Group:		Productivity/Networking/Web/Servers
@@ -130,77 +131,7 @@ Not stripped version of nginx built with the debugging log support.
 
 
 %build
-## [root@dev-iso-upload01 ngx_openresty-1.7.10.1]# ./configure --help | grep -i lua
-##                                      Lua 5.1 interpreter or LuaJIT 2.1.
-##   --without-http_lua_module          disable ngx_http_lua_module
-##   --without-http_lua_upstream_module disable ngx_http_lua_upstream_module
-##   --without-lua_cjson                disable the lua-cjson library
-##   --without-lua_redis_parser         disable the lua-redis-parser library
-##   --without-lua_rds_parser           disable the lua-rds-parser library
-##   --without-lua_resty_dns            disable the lua-resty-dns library
-##   --without-lua_resty_memcached      disable the lua-resty-memcached library
-##   --without-lua_resty_redis          disable the lua-resty-redis library
-##   --without-lua_resty_mysql          disable the lua-resty-mysql library
-##   --without-lua_resty_upload         disable the lua-resty-upload library
-##   --without-lua_resty_upstream_healthcheck
-##                                      disable the lua-resty-upstream-healthcheck library
-##   --without-lua_resty_string         disable the lua-resty-string library
-##   --without-lua_resty_websocket      disable the lua-resty-websocket library
-##   --without-lua_resty_lock           disable the lua-resty-lock library
-##   --without-lua_resty_lrucache       disable the lua-resty-lrucache library
-##   --without-lua_resty_core           disable the lua-resty-core library
-##   --with-lua51                       enable and build the bundled standard Lua 5.1 interpreter
-##   --without-lua51                    disable the bundled standard Lua 5.1 interpreter
-##   --with-lua51=DIR                   specify the external installation of Lua 5.1 by DIR
-##   --with-luajit                      enable and build the bundled LuaJIT 2.1 (the default)
-##   --with-luajit=DIR                  use the external LuaJIT 2.1 installation specified by DIR
-##   --with-luajit-xcflags=FLAGS        Specify extra C compiler flags for LuaJIT 2.1
-## check IT;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-## [root@dev-iso-upload01 SPECS]# cat ../BUILD/ngx_openresty-1.7.10.1/Makefile  | sed -e 's|LUA_CMODULE_DIR=/etc/nginx/lualib|LUA_CMODULE_DIR=/usr/lua/lualib|g' -e 's|LUA_MODULE_DIR=/etc/nginx/lualib|LUA_MODULE_DIR=/usr/lua/lualib|g' -e 's|LUA_LIB_DIR=/etc/nginx/lualib|LUA_LIB_DIR=/usr/lua/lualib|g' -e 's|resty $(DESTDIR)//etc/nginx/bin/|resty $(DESTDIR)/usr/lua/bin/|g'
-## .PHONY: all install clean
-## 
-## all:
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-cjson-2.1.0.2 && $(MAKE) DESTDIR=$(DESTDIR) LUA_INCLUDE_DIR=/usr/lua/luajit/include/luajit-2.1 LUA_CMODULE_DIR=/usr/lua/lualib LUA_MODULE_DIR=/usr/lua/lualib CJSON_CFLAGS="-g -fpic" CC=cc
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-redis-parser-0.10 && $(MAKE) DESTDIR=$(DESTDIR) LUA_INCLUDE_DIR=/usr/lua/luajit/include/luajit-2.1 LUA_LIB_DIR=/usr/lua/lualib CC=cc
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-rds-parser-0.05 && $(MAKE) DESTDIR=$(DESTDIR) LUA_INCLUDE_DIR=/usr/lua/luajit/include/luajit-2.1 LUA_LIB_DIR=/usr/lua/lualib CC=cc
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/nginx-1.7.10 && $(MAKE)
-## 
-## install: all
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-cjson-2.1.0.2 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_INCLUDE_DIR=/usr/lua/luajit/include/luajit-2.1 LUA_CMODULE_DIR=/usr/lua/lualib LUA_MODULE_DIR=/usr/lua/lualib CJSON_CFLAGS="-g -fpic" CC=cc
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-redis-parser-0.10 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_INCLUDE_DIR=/usr/lua/luajit/include/luajit-2.1 LUA_LIB_DIR=/usr/lua/lualib CC=cc
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-rds-parser-0.05 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_INCLUDE_DIR=/usr/lua/luajit/include/luajit-2.1 LUA_LIB_DIR=/usr/lua/lualib CC=cc
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-dns-0.14 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-memcached-0.13 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-redis-0.20 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-mysql-0.15 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-string-0.09 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-upload-0.09 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-websocket-0.05 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-lock-0.04 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-lrucache-0.04 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-core-0.1.0 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/lua-resty-upstream-healthcheck-0.03 && $(MAKE) install DESTDIR=$(DESTDIR) LUA_LIB_DIR=/usr/lua/lualib INSTALL=/root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/resty-cli-0.02 && /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/install resty $(DESTDIR)/usr/lua/bin/
-##         cd /root/rpmbuild/BUILD/ngx_openresty-1.7.10.1/build/nginx-1.7.10 && $(MAKE) install DESTDIR=$(DESTDIR)
-## 
-## clean:
-##         rm -rf build
-## 
-## https://github.com/APItools/monitor
-## check IT;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-## export LUA_ROOT=/usr/lua/luajit
-## LUA_ROOT=/usr/lua/luajit 
-##     --with-luajit-xcflags=FLAGS \
-##     --with-luajit=/usr/lua/luajit \
-##   --with-luajit-xcflags='-DLUA_USE_APICHECK -DLUA_USE_ASSERT -DLUA_ROOT=/usr/lua/luajit' \
-##     --add-module=%{_builddir}/%{name}-%{version}/bundle/ngx_mruby \
-##     --add-module=%{_builddir}/%{name}-%{version}/bundle/ngx_mruby/dependence/ngx_devel_kit \
-##     --add-module=%{_builddir}/%{name}-%{version}/bundle/nginx-sticky-module-ng \
-##     --add-module=%{_builddir}/%{name}-%{version}/bundle/nginx_upstream_check_module \
-##     --with-http_ngx_mruby_module \
-##     --with-http_sticky_ng_module \
-##     --with-http_upstream_check_module \
 ./configure \
         --prefix=%{_sysconfdir}/nginx \
         --sbin-path=%{_sbindir}/nginx \
@@ -235,14 +166,17 @@ Not stripped version of nginx built with the debugging log support.
         --with-http_auth_request_module \
         --with-mail \
         --with-mail_ssl_module \
-   --without-http_ngx_mruby_module \
         --with-file-aio \
         --with-ipv6 \
         --with-debug \
         %{?with_spdy:--with-http_spdy_module} \
         --with-cc-opt="%{optflags} $(pcre-config --cflags)" \
         $*
+   ## --without-http_ngx_mruby_module \
 ## gmake TARGET_STRIP=@: CCDEBUG=-g Q= XCFLAGS='-DLUA_USE_APICHECK -DLUA_USE_ASSERT' CC=cc PREFIX=/etc/nginx/luajit
+pushd %{_builddir}/%{name}-%{version}/bundle/%{mruby_mod_dir}
+minirake
+popd
 ## == re-write Makefile START ========================================================
 cat %{_builddir}/%{name}-%{version}/Makefile | sed \
   -e 's|LUA_CMODULE_DIR=/etc/nginx/lualib|LUA_CMODULE_DIR=/usr/lua/lualib|g' \
@@ -253,6 +187,7 @@ cat %{_builddir}/%{name}-%{version}/Makefile | sed \
   -e 's|resty $(DESTDIR)//etc/nginx/bin/|resty $(DESTDIR)/usr/lua/bin/|g' > %{_builddir}/%{name}-%{version}/Makefile.new
 mv -vf %{_builddir}/%{name}-%{version}/Makefile %{_builddir}/%{name}-%{version}/Makefile.old
 cat %{_builddir}/%{name}-%{version}/Makefile.new  > %{_builddir}/%{name}-%{version}/Makefile
+
 ## == re-write Makefile END ========================================================
 ## LUA_ROOT=/usr/lua/luajit make LUA_ROOT=/usr/lua/luajit %{?_smp_mflags}
 make %{?_smp_mflags}
@@ -262,16 +197,7 @@ make %{?_smp_mflags}
         %{_builddir}/%{name}-%{version}/objs/nginx.debug
 ## %%{__mv} %%{_builddir}/%%{name}-%%{version}/objs/nginx \
 ##        %%{_builddir}/%%{name}-%%{version}/objs/nginx.debug
-## --with-luajit
-##     --with-luajit=/usr/lua/luajit \
-## LUA_ROOT=/usr/lua/luajit 
-##     --add-module=%{_builddir}/%{name}-%{version}/bundle/ngx_mruby \
-##     --add-module=%{_builddir}/%{name}-%{version}/bundle/ngx_mruby/dependence/ngx_devel_kit \
-##     --add-module=%{_builddir}/%{name}-%{version}/bundle/nginx-sticky-module-ng \
-##     --add-module=%{_builddir}/%{name}-%{version}/bundle/nginx_upstream_check_module \
-##     --with-http_ngx_mruby_module \
-##     --with-http_sticky_ng_module \
-##     --with-http_upstream_check_module \
+
 ./configure \
         --prefix=%{_sysconfdir}/nginx \
         --sbin-path=%{_sbindir}/nginx \
@@ -306,13 +232,16 @@ make %{?_smp_mflags}
         --with-http_auth_request_module \
         --with-mail \
         --with-mail_ssl_module \
-   --without-http_ngx_mruby_module \
         --with-file-aio \
         --with-ipv6 \
         %{?with_spdy:--with-http_spdy_module} \
         --with-cc-opt="%{optflags} $(pcre-config --cflags)" \
         $*
+   ## --without-http_ngx_mruby_module \
 ## LUA_ROOT=/usr/lua/luajit make LUA_ROOT=/usr/lua/luajit %{?_smp_mflags}
+pushd %{_builddir}/%{name}-%{version}/bundle/%{mruby_mod_dir}
+minirake
+popd
 ## == re-write Makefile START ========================================================
 cat %{_builddir}/%{name}-%{version}/Makefile | sed \
   -e 's|LUA_CMODULE_DIR=/etc/nginx/lualib|LUA_CMODULE_DIR=/usr/lua/lualib|g' \
@@ -538,94 +467,6 @@ fi
 %{_sysconfdir}/nginx/nginx/html/50x.html
 %{_sysconfdir}/nginx/nginx/html/index.html
 
-### 2015-03-12
-## RPM build errors:
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/etc/nginx/bin/resty
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/bin
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/include
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/include/luajit-2.1
-##     File not found by glob: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/include/luajit-2.1/*
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/lib
-##     File not found by glob: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/lib/*
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/share
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/share/luajit-2.1.0-alpha
-##     File not found by glob: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/share/luajit-2.1.0-alpha/*
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/share/man
-##     File not found: /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64/usr/lua/luajit/share/man/man1/luajit.1
-
-### 2015-03-10
-## Checking for unpackaged file(s): /usr/lib/rpm/check-files /root/rpmbuild/BUILDROOT/ngx_openresty-1.7.10.1-1.1.gmo.el6.x86_64
-## error: Installed (but unpackaged) file(s) found:
-##    /etc/nginx/bin/resty
-##    /etc/nginx/luajit/bin/luajit-2.1.0-alpha
-##    /etc/nginx/luajit/include/luajit-2.1/lauxlib.h
-##    /etc/nginx/luajit/include/luajit-2.1/lua.h
-##    /etc/nginx/luajit/include/luajit-2.1/lua.hpp
-##    /etc/nginx/luajit/include/luajit-2.1/luaconf.h
-##    /etc/nginx/luajit/include/luajit-2.1/luajit.h
-##    /etc/nginx/luajit/include/luajit-2.1/lualib.h
-##    /etc/nginx/luajit/lib/libluajit-5.1.a
-##    /etc/nginx/luajit/lib/libluajit-5.1.so
-##    /etc/nginx/luajit/lib/libluajit-5.1.so.2
-##    /etc/nginx/luajit/lib/libluajit-5.1.so.2.1.0
-##    /etc/nginx/luajit/lib/pkgconfig/luajit.pc
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/bc.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/bcsave.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/dis_arm.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/dis_mips.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/dis_mipsel.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/dis_ppc.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/dis_x64.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/dis_x86.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/dump.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/p.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/v.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/vmdef.lua
-##    /etc/nginx/luajit/share/luajit-2.1.0-alpha/jit/zone.lua
-##    /etc/nginx/luajit/share/man/man1/luajit.1
-##    /etc/nginx/lualib/cjson.so
-##    /etc/nginx/lualib/rds/parser.so
-##    /etc/nginx/lualib/redis/parser.so
-##    /etc/nginx/lualib/resty/aes.lua
-##    /etc/nginx/lualib/resty/core.lua
-##    /etc/nginx/lualib/resty/core/base.lua
-##    /etc/nginx/lualib/resty/core/base64.lua
-##    /etc/nginx/lualib/resty/core/ctx.lua
-##    /etc/nginx/lualib/resty/core/exit.lua
-##    /etc/nginx/lualib/resty/core/hash.lua
-##    /etc/nginx/lualib/resty/core/misc.lua
-##    /etc/nginx/lualib/resty/core/regex.lua
-##    /etc/nginx/lualib/resty/core/request.lua
-##    /etc/nginx/lualib/resty/core/response.lua
-##    /etc/nginx/lualib/resty/core/shdict.lua
-##    /etc/nginx/lualib/resty/core/time.lua
-##    /etc/nginx/lualib/resty/core/uri.lua
-##    /etc/nginx/lualib/resty/core/var.lua
-##    /etc/nginx/lualib/resty/core/worker.lua
-##    /etc/nginx/lualib/resty/dns/resolver.lua
-##    /etc/nginx/lualib/resty/lock.lua
-##    /etc/nginx/lualib/resty/lrucache.lua
-##    /etc/nginx/lualib/resty/lrucache/pureffi.lua
-##    /etc/nginx/lualib/resty/md5.lua
-##    /etc/nginx/lualib/resty/memcached.lua
-##    /etc/nginx/lualib/resty/mysql.lua
-##    /etc/nginx/lualib/resty/random.lua
-##    /etc/nginx/lualib/resty/redis.lua
-##    /etc/nginx/lualib/resty/sha.lua
-##    /etc/nginx/lualib/resty/sha1.lua
-##    /etc/nginx/lualib/resty/sha224.lua
-##    /etc/nginx/lualib/resty/sha256.lua
-##    /etc/nginx/lualib/resty/sha384.lua
-##    /etc/nginx/lualib/resty/sha512.lua
-##    /etc/nginx/lualib/resty/string.lua
-##    /etc/nginx/lualib/resty/upload.lua
-##    /etc/nginx/lualib/resty/upstream/healthcheck.lua
-##    /etc/nginx/lualib/resty/websocket/client.lua
-##    /etc/nginx/lualib/resty/websocket/protocol.lua
-##    /etc/nginx/lualib/resty/websocket/server.lua
-##    /etc/nginx/nginx/html/50x.html
-##    /etc/nginx/nginx/html/index.html
 
 ## %%attr(755,root,root) /etc/init.d/nginx
 ## %%{homedir}/luajit/*
@@ -659,6 +500,9 @@ fi
 
 
 %changelog
+* Tue Apr 07 2015 Naoto Gohko <naoto-gohko@gmo.jp> - 1.7.10.3.g-1.3.gmo
+- enabled mruby build
+
 * Wed Mar 13 2015 Naoto Gohko <naoto-gohko@gmo.jp> - 1.7.10.1-1.2.gmo
 - fix el7 build
 

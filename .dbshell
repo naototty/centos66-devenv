@@ -4,3 +4,4 @@ show collections;
 show collections iso_download_db;
 use iso_download_db;
 show collections;
+quit
