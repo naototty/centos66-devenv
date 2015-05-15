@@ -15,8 +15,8 @@
 %debug_package %{nil}
 
 ## disable debuginfo sub-package
-##%%debug_package %%{nil}
 
 %_topdir      %(echo $HOME)/rpmbuild
 %_smp_mflags  -j3
-%__arch_install_post   /usr/lib/rpm/check-rpaths   /usr/lib/rpm/check-buildroot
+##%%__arch_install_post   /usr/lib/rpm/check-rpaths   /usr/lib/rpm/check-buildroot
+%__arch_install_post   /usr/lib/rpm/check-buildroot

@@ -8,3 +8,15 @@
 2015-03-17 13:21:41 ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/sha256sum.txt -> /mnt/isos/repos/ftp.riken.jp/Linux/centos/6.6/isos/x86_64/sha256sum.txt 0-389 2.1 KiB/s
 2015-03-17 13:21:58 ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-minimal.iso -> /mnt/isos/repos/ftp.riken.jp/Linux/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-minimal.iso 0-401604608 22.97 MiB/s
 2015-03-17 22:24:05 http://ftp.riken.jp/Linux/fedora/releases/21/Server/x86_64/iso/Fedora-Server-21-x86_64-CHECKSUM -> /mnt/isos/repos/repos_cached/ftp.riken.jp/Linux/fedora/releases/21/Server/x86_64/iso/Fedora-Server-21-x86_64-CHECKSUM 0-1139 24.5 KiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-4.8.0-37.el6.x86_64.rpm -> /root/rpmbuild/rpm-4.8.0-37.el6.x86_64.rpm 0-922940 14.10 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-apidocs-4.8.0-37.el6.noarch.rpm -> /root/rpmbuild/rpm-apidocs-4.8.0-37.el6.noarch.rpm 0-1430168 23.67 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-build-4.8.0-37.el6.x86_64.rpm -> /root/rpmbuild/rpm-build-4.8.0-37.el6.x86_64.rpm 0-130144 8.20 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-cron-4.8.0-37.el6.noarch.rpm -> /root/rpmbuild/rpm-cron-4.8.0-37.el6.noarch.rpm 0-24600 1.45 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-devel-4.8.0-37.el6.i686.rpm -> /root/rpmbuild/rpm-devel-4.8.0-37.el6.i686.rpm 0-94972 4.51 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-devel-4.8.0-37.el6.x86_64.rpm -> /root/rpmbuild/rpm-devel-4.8.0-37.el6.x86_64.rpm 0-95292 6.92 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-libs-4.8.0-37.el6.i686.rpm -> /root/rpmbuild/rpm-libs-4.8.0-37.el6.i686.rpm 0-322692 20.09 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-libs-4.8.0-37.el6.x86_64.rpm -> /root/rpmbuild/rpm-libs-4.8.0-37.el6.x86_64.rpm 0-320060 19.33 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpm-python-4.8.0-37.el6.x86_64.rpm -> /root/rpmbuild/rpm-python-4.8.0-37.el6.x86_64.rpm 0-57920 6.91 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpmdevtools-7.5-2.el6.noarch.rpm -> /root/rpmbuild/rpmdevtools-7.5-2.el6.noarch.rpm 0-111164 12.60 MiB/s
+2015-05-11 12:23:11 http://ns01.ovps.internal-gmo/pub/Linux/centos/6.6/os/x86_64/Packages/rpmlint-0.94-3.1.el6.noarch.rpm -> /root/rpmbuild/rpmlint-0.94-3.1.el6.noarch.rpm 0-190224 11.82 MiB/s
+2015-05-14 19:02:14 http://ns01.ovps.internal-gmo/pub/Linux/vault.centos.org/6.6/os/Source/SPackages/keepalived-1.2.13-4.el6.src.rpm -> /root/rpmbuild/keepalived-1.2.13-4.el6.src.rpm 0-350265 7.11 MiB/s

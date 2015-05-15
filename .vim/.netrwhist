@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/etc/sysconfig'
+let g:netrw_dirhist_2='/root/rpmbuild/BUILD/ngx_openresty-1.7.10.4.g/bundle/nginx-1.7.10'
+let g:netrw_dirhist_3='/root/rpmbuild/BUILD/ngx_openresty-1.7.10.4.g/bundle/nginx-1.7.10/src'
+let g:netrw_dirhist_4='/root/rpmbuild/BUILD/ngx_openresty-1.7.10.4.g/bundle/nginx-1.7.10/src/core'
+let g:netrw_dirhist_5='/root/rpmbuild/BUILD/ngx_openresty-1.7.10.4.g/bundle/nginx-1.7.10/src'
+let g:netrw_dirhist_6='/root/rpmbuild/BUILD/ngx_openresty-1.7.10.4.g/bundle/nginx-1.7.10/src/http'
