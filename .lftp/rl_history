@@ -668,3 +668,45 @@ ls
 mget keepalived-1.2.13-4.el6.src.rpm 
  1431597749
 exit
+ 1434454575
+open ftp://ftp.riken.jp/Linux/centos/6.6/isos/x86_64/
+ 1434454576
+ls
+ 1434454584
+exit
+ 1434514501
+lftp http://ftp.riken.jp/Linux/fedora
+ 1434514502
+ls
+ 1434514505
+cd releases/
+ 1434514505
+ls
+ 1434514507
+cd 22
+ 1434514507
+ls
+ 1434514512
+cd Images/
+ 1434514512
+ls
+ 1434514515
+cd ..
+ 1434514516
+ls
+ 1434514518
+cd Server/
+ 1434514518
+ls
+ 1434514521
+cd x86_64/
+ 1434514521
+ls
+ 1434514523
+cd iso/
+ 1434514523
+ls
+ 1434514524
+pwd
+ 1434514534
+exit

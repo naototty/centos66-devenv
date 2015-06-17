@@ -1,11 +1,17 @@
 # Pass --without docs to rpmbuild if you don't want the documentation
 
+## GMO START
+%define _without_docs 0
+## GMO END
+
 Name: 		git
-Version: 	2.2.0
-Release: 	1.1%{?dist}
+##Version: 	2.2.0
+Version: 	2.3.8
+Release: 	1.1.2.gmo%{?dist}
 Summary:  	Core git tools
 License: 	GPL
 Group: 		Development/Tools
+## https://www.kernel.org/pub/software/scm/git/git-2.3.8.tar.gz
 URL: 		http://kernel.org/pub/software/scm/git/
 Source: 	http://kernel.org/pub/software/scm/git/%{name}-%{version}.tar.gz
 ## BuildRequires:	zlib-devel >= 1.2, openssl-devel, curl-devel, expat-devel, gettext  %{!?_without_docs:, xmlto, asciidoc > 6.0.3}
@@ -118,8 +124,41 @@ make %{_smp_mflags} CFLAGS="$RPM_OPT_FLAGS" \
      %{path_settings} \
      all %{!?_without_docs: doc}
 
+##  16   make prefix=<some dir>↲
+##  17   make prefix=<some dir> install↲
+##  18   make prefix=<some dir> install-doc↲
+##  19 ↲
+##  20 To run tests first copy git-subtree to the main build area so the↲
+##  21 newly-built git can find it:↲
+##  22 ↲
+##  23   cp git-subtree ../..↲
+
+pushd contrib/subtree
+make %{_smp_mflags} CFLAGS="$RPM_OPT_FLAGS" \
+     %{path_settings} \
+     all
+popd
+
+
+
 %install
 rm -rf $RPM_BUILD_ROOT
+## subtree START
+pushd contrib/subtree
+make %{_smp_mflags} CFLAGS="$RPM_OPT_FLAGS" DESTDIR=$RPM_BUILD_ROOT \
+     %{path_settings} \
+     INSTALLDIRS=vendor install %{!?_without_docs: install-doc}
+%if %{!?_without_docs:1}0
+make %{_smp_mflags} CFLAGS="$RPM_OPT_FLAGS" DESTDIR=$RPM_BUILD_ROOT \
+     %{path_settings} \
+     INSTALLDIRS=vendor install-doc
+cp -avf git-subtree ../../
+cp -avf git-subtree.txt ../../Documentation/
+# ../BUILD/git-2.3.8/contrib/subtree/git-subtree.txt
+%endif
+popd
+## subtree END
+cp -avf ./contrib/subtree/git-subtree.txt ./Documentation/
 make %{_smp_mflags} CFLAGS="$RPM_OPT_FLAGS" DESTDIR=$RPM_BUILD_ROOT \
      %{path_settings} \
      INSTALLDIRS=vendor install %{!?_without_docs: install-doc}
@@ -132,6 +171,7 @@ find $RPM_BUILD_ROOT -type f -name perllocal.pod -exec rm -f {} ';'
 (find $RPM_BUILD_ROOT%{_libexecdir}/git-core -type f | grep -vE "archimport|svn|cvs|email|gitk|git-gui|git-citool" | sed -e s@^$RPM_BUILD_ROOT@@)               >> bin-man-doc-files
 (find $RPM_BUILD_ROOT%{perl_vendorlib} -type f | sed -e s@^$RPM_BUILD_ROOT@@) >> perl-files
 %if %{!?_without_docs:1}0
+install -D -m 644 -T contrib/subtree/git-subtree.txt $RPM_BUILD_ROOT/Documentation
 (find $RPM_BUILD_ROOT%{_mandir} $RPM_BUILD_ROOT/Documentation -type f | grep -vE "archimport|svn|git-cvs|email|gitk|git-gui|git-citool" | sed -e s@^$RPM_BUILD_ROOT@@ -e 's/$/*/' ) >> bin-man-doc-files
 %else
 rm -rf $RPM_BUILD_ROOT%{_mandir}
@@ -140,6 +180,7 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale
 
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/bash_completion.d
 install -m 644 -T contrib/completion/git-completion.bash $RPM_BUILD_ROOT%{_sysconfdir}/bash_completion.d/git
+install -D -m 644 -T contrib/subtree/git-subtree.txt $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT

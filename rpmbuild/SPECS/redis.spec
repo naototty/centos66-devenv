@@ -1,6 +1,6 @@
 %global _hardened_build 1
 
-%define prever rc4
+##%%define prever rc4
 
 %if 0%{?fedora} >= 15 || 0%{?rhel} >= 7
 %global with_systemd 1
@@ -19,9 +19,11 @@
 
 Name:             redis
 ## Version:          2.8.19
-Version:          3.0.0
+## Version:          3.0.0
+Version:          3.0.2
 ## Release:          1%%{?dist}
-Release:          rc4.1%{?dist}
+## Release:          rc4.1%%{?dist}
+Release:          1%{?dist}
 Summary:          A persistent key-value database
 
 Group:            Applications/Databases
@@ -237,6 +239,9 @@ fi
 
 
 %changelog
+* Tue Jun 17 2015 Naoto Gohko <naoto-gohko@gmo.jp> - 3.0.2-1
+- Redis 3.0.2 - Release date: 4 Jun 2015
+
 * Wed Dec 17 2014 Remi Collet <remi@fedoraproject.org> - 2.8.19-1
 - Redis 2.8.19 - Release date: 16 Dec 2014
   upgrade urgency: LOW for both Redis and Sentinel.

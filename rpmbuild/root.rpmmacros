@@ -1,0 +1,22 @@
+##%%_topdir /tmp/devel/rpm
+##%%_topdir /root/pkg-builder/docker-rpm-builder/experiments/build-root
+##%%_topdir /root/pkg-builder/work-experiments/build-root
+##%%_topdir /export/var/src/redhat
+##%%packager NAOTO GOHKO   <naoto-gohko@gmo.jp>
+%packager GMO Eng. Div. SI Team  <sys-int@gmo.jp>
+
+%_tmppath %{_topdir}/temp
+###%%_signature gpg
+###%%_gpg_name __KEYID__
+%_gpg_name 0
+
+%_enable_debug_packages 0
+
+%debug_package %{nil}
+
+## disable debuginfo sub-package
+
+%_topdir      %(echo $HOME)/rpmbuild
+%_smp_mflags  -j3
+##%%__arch_install_post   /usr/lib/rpm/check-rpaths   /usr/lib/rpm/check-buildroot
+%__arch_install_post   /usr/lib/rpm/check-buildroot

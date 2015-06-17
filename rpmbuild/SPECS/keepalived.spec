@@ -3,10 +3,14 @@
 %bcond_with profile
 %bcond_with debug
 
+## GMO
+%define snmp 1
+
 Name: keepalived
 Summary: Load balancer and high availability service
 ##Version: 1.2.13
-Version: 1.2.16
+##Version: 1.2.16
+Version: 1.2.17
 Release: 4.gmo%{?dist}
 License: GPLv2+
 URL: http://www.keepalived.org/
@@ -89,9 +93,14 @@ fi
 %dir %{_sysconfdir}/keepalived/
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/keepalived/keepalived.conf
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/sysconfig/keepalived
+# %%dir /usr/share/snmp/mibs/
+# /usr/share/snmp/mibs/KEEPALIVED-MIB
+# /usr/share/snmp/mibs/VRRP-MIB
 %{_sysconfdir}/rc.d/init.d/keepalived
 %if %{with snmp}
 %{_datadir}/snmp/mibs/KEEPALIVED-MIB.txt
+%{_datadir}/snmp/mibs/KEEPALIVED-MIB
+%{_datadir}/snmp/mibs/VRRP-MIB
 %endif
 %attr(0755,root,root) %{_bindir}/genhash
 %attr(0755,root,root) %{_sbindir}/keepalived
@@ -100,6 +109,9 @@ fi
 %{_mandir}/man8/keepalived.8*
 
 %changelog
+* Thu Jun 09 2015 Naoto Gohko <naoto-gohko@gmo.jp> - 1.2.17-4.gmo
+- Rebase to upstream version 1.2.17
+
 * Thu May 14 2015 Naoto Gohko <naoto-gohko@gmo.jp> - 1.2.16-4.gmo
 - Rebase to upstream version 1.2.16
 

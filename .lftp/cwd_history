@@ -1,7 +1,7 @@
-ftp://ftp.riken.jp      	1426678602:/Linux/centos/6.6/isos/x86_64
+ftp://ftp.riken.jp      	1434454584:/Linux/centos/6.6/isos/x86_64
 http://agentzh.org      	1426083798:/
 http://ftp.jaist.ac.jp  	1426660633:http://ftp.jaist.ac.jp:/pub/NetBSD/iso/6.1.5/
-http://ftp.riken.jp     	1431312998:http://ftp.riken.jp/Linux/
+http://ftp.riken.jp     	1434514534:http://ftp.riken.jp/Linux/fedora/releases/22/Server/x86_64/iso/
 http://ns01.ovps.internal-gmo	1431597749:http://ns01.ovps.internal-gmo/pub/Linux/vault.centos.org/6.6/os/Source/SPackages/
 http://openresty.org    	1426083803:http://openresty.org/#Download
 https://repo.mongodb.org	1426134035:https://repo.mongodb.org/yum/

@@ -27,3 +27,13 @@ _s99useraccounts
 .vim/bundle/jedi-vim/*
 .viminfo
 .virtualenvs/
+rpm-4.8.0-37.el6.x86_64.rpm
+rpm-apidocs-4.8.0-37.el6.noarch.rpm
+rpm-build-4.8.0-37.el6.x86_64.rpm
+rpm-cron-4.8.0-37.el6.noarch.rpm
+rpm-devel-4.8.0-37.el6.i686.rpm
+rpm-devel-4.8.0-37.el6.x86_64.rpm
+rpm-libs-4.8.0-37.el6.i686.rpm
+rpm-libs-4.8.0-37.el6.x86_64.rpm
+rpm-python-4.8.0-37.el6.x86_64.rpm
+
